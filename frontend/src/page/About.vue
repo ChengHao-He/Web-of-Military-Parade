@@ -26,7 +26,7 @@
 <script>
 import axios from "axios";
 import { reactive, getCurrentInstance } from "vue";
-import { themeBus } from '../../../../Web-master/frontend/src/eventBus.js';
+import { themeBus } from '../eventBus.js';
 import { watch } from 'vue';
 
 export default {
@@ -113,7 +113,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../../../../Web-master/frontend/src/imgs/back.jpg");
+  background-image: url("../imgs/back.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
@@ -162,7 +162,7 @@ body {
   border: 2px solid #faf9de;
   border-radius: 10px;
   /* background: url("../imgs/board-back.jpg"); */
-  background: url("../../../../Web-master/frontend/src/imgs/board-back.jpg");
+  background: url("../imgs/board-back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
