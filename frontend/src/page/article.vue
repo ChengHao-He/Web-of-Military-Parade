@@ -7,11 +7,14 @@
           {{ page.content }}
         </div>
       </div>
-      <i class="article-icon">{{ page.author }}</i>
-      <i class="el-icon-date article-icon">{{ page.time }}</i>
+      <div class="article-footer">
+        <i class="article-icon">{{ page.author }}</i>
+        <i class="el-icon-date article-icon">{{ page.time }}</i>
+      </div>
     </el-card>
   </div>
 </template>
+
 
 <script>
 import {onMounted, reactive, ref, getCurrentInstance} from 'vue';
@@ -46,26 +49,65 @@ export default {
 
 <style scoped>
 .main {
-  margin: 0;
-  padding: 0;
-  margin-top: 100px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0 auto;                /* 居中 */
+  padding: 20px;
+  margin-top: 80px;
+  max-width: 1200px;             /* 限制整体宽度 */
+  background-color: #f9f9f9;     /* 背景淡灰色 */
+  min-height: 100vh;
+  box-sizing: border-box;        /* 避免padding撑开宽度 */
 }
-.article {
-  margin: 0;
-  padding: 0;
-  margin-top: 500px;
-}
+
 .el-card {
   margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;            /* 方便放置右下角元素 */
+  padding-bottom: 40px;          /* 给作者/时间留空间 */
+}
+
+.el-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.main-text {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.main-text h2,
+h2.main-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.article-footer {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  display: flex;
+  gap: 12px;
 }
 
 .article-icon {
-  color: #909399;
-  font-size: 13px;
-  margin-right: 10px;
-  text-decoration: none;
+  color: #666;
+  font-size: 14px;
 }
+
+.article-icon:first-of-type {
+  font-weight: 500;
+  color: #2980b9;
+}
+
+.el-icon-date.article-icon {
+  color: #888;
+}
+
 
 </style>
