@@ -284,7 +284,7 @@ export default {
 .video-control {
   width: 100%;
   height: 8vh;
-  background-color: rgb(250, 163, 59);
+  background-color: #C3160C;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -325,7 +325,7 @@ export default {
   margin-left: 2vh;
   line-height: 6vh;
   font-size: 3vh;
-  color: rgb(137, 95, 72);
+  color: white;
 }
 
 /* 视频栏大小设置 */
@@ -339,8 +339,11 @@ export default {
   width: 15vw;
   height: 25vh;
   margin-right: 3vw;
-  background-color: white;
+  background-color: gray;
   border-radius: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 横向居中 */
 }
 
 /* 每层视频的大小设置 */
@@ -360,14 +363,16 @@ export default {
 
 /* 单个视频名字设置 */
 .video-name {
-  color: slategray;
-  font-size: 0.5em;
+  color: white;              /* 改成柔和的深灰 */
+  font-size: 0.8em;         /* 稍微比原来大一点 */
+  text-align: center;       /* 居中对齐 */
+  margin-top: 0.5vh;
 }
-
 /* 单个视频作者名字设置 */
 .upLoad-name {
-  color: black;
-  font-size: 0.5em;
+  color: whitesmoke;              /* 改成更淡的灰色，和标题区分 */
+  font-size: 0.7em;
+  text-align: center;       /* 居中对齐 */
 }
 
 /*视频上出现阴影设置*/

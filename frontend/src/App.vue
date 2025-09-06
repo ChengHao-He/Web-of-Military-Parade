@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="top-nav">
-      <div class="logo"><img src="./icon/logo.png" alt="" class="logo-img" title="我们假设他是个 logo"></div>
+<!--      <div class="logo"><img src="./icon/logo.png" alt="" class="logo-img" title="我们假设他是个 logo"></div>-->
       <div class="select-theme">
         <!-- 当前主题
         <select name="主题" id="" @change="selectTheme" v-model="this.$data.theme">
